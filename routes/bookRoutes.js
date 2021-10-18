@@ -16,6 +16,11 @@ router.get("/books", (req, res, next) => {
 });
 
 
+router.get('/books/create', (req, res, next) => {
+    res.render("books/book-create");
+});
+
+
 router.get("/books/:bookId", (req, res, next) => {
     Book.findById(req.params.bookId)
         .then( (bookFromDB) => {

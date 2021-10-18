@@ -11,6 +11,11 @@ h1 {
   color: 15px;
 }
 
+label, input, textarea {
+  display: block;
+  margin: 1rem 0;
+}
+
 .book-summary {
   border: 1px solid #666;
   margin: 1rem auto;
