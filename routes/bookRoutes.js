@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const Book = require("../models/Book.model");
 
+
+
 router.get("/books", (req, res, next) => {
     Book.find()
         .then( (booksFromDB) => {
@@ -14,6 +16,7 @@ router.get("/books", (req, res, next) => {
             next(error);
         });
 });
+
 
 
 router.get('/books/create', (req, res, next) => {
@@ -67,6 +70,20 @@ router.get("/books/:bookId", (req, res, next) => {
             next(error);
         });
 });
+
+
+
+router.get('/books/:bookId/edit', (req, res, next) => {
+    Book.findById(req.params.bookId)
+        .then( (bookFromDB) => {
+            res.render("books/book-edit", bookFromDB);
+        })
+        .catch( (error) => {
+            console.log("Error getting details for a single book from DB to render edit form", error);
+            next(error);
+        });
+});
+
 
 
 module.exports = router;

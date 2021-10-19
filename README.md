@@ -34,3 +34,18 @@ Step 4: (CREATE) functionality to create new books
   - [x] After book is created, we will redirect to `/books` (we don't need to create an additional view)
 
 
+
+Step 5: (UPDATE) functionality to update a book
+
+- Step 5.a: display a form to update a book
+  - [x] add link (eg. in book details page)
+  - [x] Create a route (GET `/books/:bookId/edit`)
+  - [x] Make a request to the DB --> Book.findById()
+  - [x] Create a view (`book-edit.hbs`)
+
+- Step 5.b: receive the information from the form and save in DB
+
+  - [ ] Create a route (POST `/books/:bookId/edit`)
+  - [ ] Query to the DB --> Book.findByIdAndUpdate(id, newBookDetails)
+  - [ ] Redirect to the book details page
+
