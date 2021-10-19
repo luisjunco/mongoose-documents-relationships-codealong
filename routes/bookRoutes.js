@@ -85,5 +85,26 @@ router.get('/books/:bookId/edit', (req, res, next) => {
 });
 
 
+router.post('/books/:bookId/edit', (req, res, next) => {
+
+    const {title, author, description, rating} = req.body;
+    const newDetails = {
+        title,
+        author,
+        description,
+        rating
+    };
+
+    Book.findByIdAndUpdate(req.params.bookId, newDetails, {new: true})
+        .then( (bookFromDB) => {
+            res.redirect('/books/' + bookFromDB._id);
+        })
+        .catch( (error) => {
+            console.log("Error updating book details", error);
+            next(error);
+        });
+});
+
+
 
 module.exports = router;

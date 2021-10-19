@@ -43,9 +43,9 @@ Step 5: (UPDATE) functionality to update a book
   - [x] Make a request to the DB --> Book.findById()
   - [x] Create a view (`book-edit.hbs`)
 
-- Step 5.b: receive the information from the form and save in DB
+- Step 5.b: receive edit form and update DB
 
-  - [ ] Create a route (POST `/books/:bookId/edit`)
-  - [ ] Query to the DB --> Book.findByIdAndUpdate(id, newBookDetails)
-  - [ ] Redirect to the book details page
+  - [x] Create a route (POST `/books/:bookId/edit`)
+  - [x] Query to the DB --> Book.findByIdAndUpdate(id, newBookDetails)
+  - [x] Redirect to the book details page
 
