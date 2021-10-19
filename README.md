@@ -49,3 +49,12 @@ Step 5: (UPDATE) functionality to update a book
   - [x] Query to the DB --> Book.findByIdAndUpdate(id, newBookDetails)
   - [x] Redirect to the book details page
 
+
+Step 6: (DELETE) functionality to delete a book
+
+- [x] Add a button (ex. in the list of books) -it needs to be inside a form, so that we send a POST request.
+- [x] Create a route (POST `/books/:bookId/delete`)
+- [x] Query to DB --> Book.findByIdAndDelete(req.params.bookId)
+- [x] Redirect to `/books`
+
+

@@ -11,6 +11,10 @@ h1 {
   color: 15px;
 }
 
+form {
+  margin: 1rem auto;
+}
+
 label, input, textarea {
   display: block;
   margin: 1rem 0;
