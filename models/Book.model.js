@@ -1,10 +1,19 @@
 const { Schema, model } = require('mongoose');
 
+
+const authorSchema = new Schema(
+  {
+    name: String,
+    surname: String,
+    country: String
+  }
+);
+
 const bookSchema = new Schema(
   {
     title: String,
     description: String,
-    author: String,
+    author: authorSchema,
     rating: Number
   },
   {
