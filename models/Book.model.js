@@ -1,19 +1,12 @@
 const { Schema, model } = require('mongoose');
 
 
-const authorSchema = new Schema(
-  {
-    name: String,
-    surname: String,
-    country: String
-  }
-);
 
 const bookSchema = new Schema(
   {
     title: String,
     description: String,
-    author: authorSchema,
+    author: {type: Schema.Types.ObjectId, ref: 'Author'},
     rating: Number
   },
   {
