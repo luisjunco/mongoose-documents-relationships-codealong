@@ -1,5 +1,11 @@
 
+# Mongoose Document Relationships (Codealong)
 
+Exercise to practice document relationships in Mongoose and MongoDB.
+
+
+
+## Iterations
 
 Iteration 0: Update DB name
 
@@ -13,5 +19,13 @@ Iteration 2: References
 - Update Book Model (single reference to 'Author')
 - Create Author Model
 - Update seed File
+
+
+Iteration 3: Create book, allowing users to choose from a list of authors
+
+- 3.a Update the form to display a list with all posible authors:
+  - Update the route that displays the form (GET `/books/create`)
+  - Make a query to the DB (`Author.find`) + send that information to the view
+  - Update the view (`book-create.hbs`)
 
 
