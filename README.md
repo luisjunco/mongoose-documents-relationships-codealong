@@ -34,3 +34,4 @@ Iteration 3: Create book, allowing users to choose from a list of authors
 
 Iteration 4: display the correct information of the author
 - We use `.populate('author')` (where 'author' is the name of the property we need to populate)
+
